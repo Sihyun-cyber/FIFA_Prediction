@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:7860 app:app
+web: echo "--- Checking requirements.txt ---" && cat requirements.txt && echo "--- Checking app.py head ---" && head -n 15 app.py && echo "--- Check complete, sleeping forever ---" && sleep infinity
