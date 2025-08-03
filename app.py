@@ -7,7 +7,6 @@ import io
 import base64
 
 from flask import Flask, request, jsonify, render_template
-# import tensorflow as tf # TensorFlow는 더 이상 사용하지 않습니다.
 import matplotlib.pyplot as plt
 import seaborn as sns
 
