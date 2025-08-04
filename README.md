@@ -177,21 +177,8 @@ gunicorn을 사용하여 더 안정적으로 서버를 실행할 수 있습니�
     `python check_names.py`
     해당 선수가 존재하면 연도별 player_id와 함께 정확한 이름을 출력해줍니다.
 
-## **6. 파일 구조 (File Structure)**
 
-
-├── app.py                      # Flask 예측 API 서버
-├── check_names.py              # 선수 이름 및 ID 확인 유틸리티
-├── player_aging_curve_model.pkl  # (생성됨) 직렬화된 Scikit-learn 모델
-├── scaler.pkl                  # (생성됨) 직렬화된 StandardScaler 객체
-├── combined_fifa_data_processed.csv # (생성됨) 전처리 완료된 통합 데이터
-├── final_features.json         # (생성됨) 모델 학습에 사용된 특성 목록
-├── numerical_cols_to_scale.json # (생성됨) 스케일링이 적용된 수치형 특성 목록
-├── requirements.txt            # Python 라이브러리 의존성 목록
-├── train.py                    # 모델 학습 및 데이터 전처리 파이프라인
-└── data/                       # (필요) players_15.csv ~ players_23.csv 원본 데이터 위치
-
-## **7. 결론 및 향후 과제 (Conclusion & Future Work)**
+## **6. 결론 및 향후 과제 (Conclusion & Future Work)**
 
 본 프로젝트는 FIFA 데이터를 활용하여 선수의 에이징 커브를 예측하는 MLP 모델을 성공적으로 구축하고, 이를 Flask API를 통해 서비스화했습니다. 데이터 정제, 특성 공학, 연쇄적 예측 로직 구현을 통해 선수의 커리어 궤적에 대한 데이터 기반의 통찰력을 제공할 수 있음을 확인했습니다.
 
@@ -202,3 +189,4 @@ gunicorn을 사용하여 더 안정적으로 서버를 실행할 수 있습니�
 3.  **웹 인터페이스 개발:** 현재 API 형태로 제공되는 서비스를 사용자가 더 쉽게 이용할 수 있도록 프론트엔드 웹 인터페이스를 구축합니다.
 4.  **클라우드 배포:** 모델과 API를 AWS, GCP 등 클라우드 플랫폼에 배포하여 확장성과 안정성을 확보합니다.
 5.  **포지션별 모델링:** 필드 플레이어 전체를 대상으로 하는 단일 모델 대신, 공격수, 미드필더, 수비수 등 포지션별로 특화된 에이징 커브 모델을 각각 구축하여 예측 성능을 높일 수 있습니다.
+
